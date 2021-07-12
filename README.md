@@ -20,7 +20,7 @@ git clone https://github.com/leo812leo/Bullshit_Generator.git
 ```
 2. 進入專案目錄
 ```
-cd trash-talk-generator
+cd Bullshit_Generator
 ```
 3. 安裝相關套件
 ```
