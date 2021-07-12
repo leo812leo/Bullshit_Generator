@@ -17,7 +17,11 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-
+app.post('/', (req, res) => {
+  const job = req.body.target
+  const talk = bullshitTalk(req.body)
+  res.render('index', { talk, job })
+})
 
 
 app.listen(port, () => {

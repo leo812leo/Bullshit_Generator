@@ -7,7 +7,7 @@
         style="height: 180px"
       />
       <div class="card-body">
-        <p class="card-text text-center">我是找昆蟲專家</p>
+        <p class="card-text text-center text-secondary">我是找昆蟲專家</p>
 
       </div>
     </div>
@@ -18,7 +18,7 @@
         style=" height: 180px"
       />
       <div class="card-body">
-        <p class="card-text text-center">有本事自己剪</p>
+        <p class="card-text text-center text-secondary">有本事自己剪</p>
 
       </div>
     </div>
@@ -30,58 +30,73 @@
       />
       <div class="card-body">
 
-        <p class="card-text text-center">你以為錢從天上來?</p>
+        <p class="card-text text-center text-secondary">你以為錢從天上來?</p>
       </div>
     </div>
   </div>
-  <fieldset
-    class="form-group d-flex justify-content-between row"
-    id="job-hunting-status"
-  >
-    <div class="form-check form-check-inline justify-content-center col-3">
-      <input
-        class="form-check-input"
-        name="job-hunting"
-        type="radio"
-        id="active"
-        value="active"
-      />
-      <label class="form-check-label" for="active">
-        工程師
-      </label>
-    </div>
+  <form method="POST" action="/">
+    <fieldset class="form-group container mt-2" id="job">
+      <div class="row justify-content-between">
+        <div class="form-check form-check-inline justify-content-center col-3">
+          <input
+            class="form-check-input"
+            name="target"
+            type="radio"
+            value="engineer"
+          />
+          <label class="form-check-label" for="engineer">
+            工程師
+          </label>
+        </div>
 
-    <div class="form-check form-check-inline justify-content-center col-3">
-      <input
-        class="form-check-input"
-        name="job-hunting"
-        type="radio"
-        id="intermediate"
-        value="intermediate"
-      />
-      <label class="form-check-label" for="intermediate">
-        設計師
-      </label>
-    </div>
+        <div class="form-check form-check-inline justify-content-center col-3">
+          <input
+            class="form-check-input"
+            name="target"
+            type="radio"
+            value="designer"
+          />
+          <label class="form-check-label" for="designer">
+            設計師
+          </label>
+        </div>
 
-    <div class="form-check form-check-inline justify-content-center col-3">
-      <input
-        class="form-check-input"
-        name="job-hunting"
-        type="radio"
-        id="inactive"
-        value="inactive"
-      />
-      <label class="form-check-label" for="inactive">
-        創業家
-      </label>
-    </div>
-  </fieldset>
-  <button type="button" class="btn btn-primary">Primary</button>
-  {{! show password }}
-  {{#if talk}}
-    <div class="alert alert-info" role="alert">
-      <code>{{talk}}</code>
-    </div>
-  {{/if}}
+        <div class="form-check form-check-inline justify-content-center col-3">
+          <input
+            class="form-check-input"
+            name="target"
+            type="radio"
+            value="entrepreneur"
+          />
+          <label class="form-check-label" for="entrepreneur">
+            創業家
+          </label>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <button type="submit" class="btn btn-success">產生幹話</button>
+      </div>
+    </fieldset>
+  </form>
+  {{! show }}
+  <div class="ml-3 flex-grow-1">
+    <textarea
+      readonly
+      class="form-control trashTalk-display font-weight-bold"
+      rows="3"
+      aria-label="With textarea"
+      style="font-size: larger;"
+    >
+      {{#if talk}}
+        {{talk}}
+      {{else}}你不選人我怎麼講幹話？
+      {{/if}}
+    </textarea>
+  </div>
 </div>
+
+{{#if job}}
+  <script>
+    document.querySelector(`input[value="{{job}}"]`).checked = true
+  </script>
+{{/if}}
