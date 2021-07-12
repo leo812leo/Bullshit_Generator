@@ -1,0 +1,87 @@
+<div class="container py-5">
+  <div class="row d-flex justify-content-between">
+    <div class="card col-3">
+      <img
+        src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+        class="card-img-top"
+        style="height: 180px"
+      />
+      <div class="card-body">
+        <p class="card-text text-center">我是找昆蟲專家</p>
+
+      </div>
+    </div>
+    <div class="card col-3">
+      <img
+        src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+        class="card-img-top"
+        style=" height: 180px"
+      />
+      <div class="card-body">
+        <p class="card-text text-center">有本事自己剪</p>
+
+      </div>
+    </div>
+    <div class="card col-3">
+      <img
+        src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+        class="card-img-top"
+        style=" height: 180px"
+      />
+      <div class="card-body">
+
+        <p class="card-text text-center">你以為錢從天上來?</p>
+      </div>
+    </div>
+  </div>
+  <fieldset
+    class="form-group d-flex justify-content-between row"
+    id="job-hunting-status"
+  >
+    <div class="form-check form-check-inline justify-content-center col-3">
+      <input
+        class="form-check-input"
+        name="job-hunting"
+        type="radio"
+        id="active"
+        value="active"
+      />
+      <label class="form-check-label" for="active">
+        工程師
+      </label>
+    </div>
+
+    <div class="form-check form-check-inline justify-content-center col-3">
+      <input
+        class="form-check-input"
+        name="job-hunting"
+        type="radio"
+        id="intermediate"
+        value="intermediate"
+      />
+      <label class="form-check-label" for="intermediate">
+        設計師
+      </label>
+    </div>
+
+    <div class="form-check form-check-inline justify-content-center col-3">
+      <input
+        class="form-check-input"
+        name="job-hunting"
+        type="radio"
+        id="inactive"
+        value="inactive"
+      />
+      <label class="form-check-label" for="inactive">
+        創業家
+      </label>
+    </div>
+  </fieldset>
+  <button type="button" class="btn btn-primary">Primary</button>
+  {{! show password }}
+  {{#if talk}}
+    <div class="alert alert-info" role="alert">
+      <code>{{talk}}</code>
+    </div>
+  {{/if}}
+</div>
