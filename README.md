@@ -16,7 +16,7 @@
 
 1. 在終端機輸入指令 Clone 此專案至本機電腦
 ```
-git clone
+git clone https://github.com/leo812leo/Bullshit_Generator.git
 ```
 2. 進入專案目錄
 ```
